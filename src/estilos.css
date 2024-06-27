@@ -1,0 +1,301 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-header {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.sidebar-content {
+    overflow: auto;
+    flex: 1;
+}
+
+.nav {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #6aa8d1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.header-button {
+    background: none;
+    border: none;
+    display: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.main-content {
+    padding: 1rem;
+    background-color: #fff;
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.actions button {
+    margin-right: 0.5rem;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-template-rows: auto;
+        height: auto;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .header-button {
+        display: block;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .main-content {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #222;
+        padding-top: 10px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: transform 0.4s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Estilos para la caja 3D */
+.section-box {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.section-box:hover {
+    transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
+}
+
+/* Estilos para centrar contenido en main-content */
+.main-content {
+    padding: 1rem;
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    width: 100%;
+    max-width: 850px; /* Ajusta el máximo ancho según sea necesario */
+}

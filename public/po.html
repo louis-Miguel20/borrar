@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tus Actas</title>
+    <link rel="icon" href="./login/assets/images/actas-removebg-preview.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="grid grid-cols-[280px_1fr] min-h-screen w-full">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="sidebar-link">
+                    <img src="/login/assets/images/actas-removebg-preview.png" alt=""class="icon" xmlns="/vista/login/assets/images/actas-removebg-preview.png" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></>
+                    <span>Tus Actas</span>
+                </a>
+            </div>
+
+            <nav>
+                <a href="./index.html">aquiii</a>
+              </nav>
+            <div class="sidebar-content">
+                <nav class="nav">
+                    <a href="./crear.html" class="nav-link">Crear Acta</a>
+                    <a href="./ver.html" class="nav-link">Ver Actas</a>
+                    <a href="#" class="nav-link">Editar Acta</a>
+                    <a href="#" class="nav-link">Archivar Acta</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header class="header">
+                <div class="flex items-center gap-4">
+                    <a class="flex items-center gap-2" href="#">
+                        <img src="/login/assets/images/R.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                        </>
+                        <span class="font-bold text-lg">Actas</span>
+                    </a>
+                </div>
+                <nav>
+                    <a href="./Reunion.html">Bienvenido</a>
+                </nav>
+                <button class="menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </header>
+            <main class="main-contents">
+                <div class="form-containers">
+                    <h1 class="form-titles">Crear Acta</h1>
+                    <p class="form-subtitles">Llena los siguientes campos para crear una nueva acta.</p>
+                    <div class="form-boxs">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-field">
+                                    <label for="texto">Titulo</label>
+                                    <input type="text" id="titulo" />
+                                </div>
+                                <div class="form-field">
+                                    <label for="fecha">Fecha</label>
+                                    <input type="date" id="fecha" />
+                                </div>
+                                <div class="form-field">
+                                    <label for="hora-inicio">Hora de Inicio</label>
+                                    <input type="time" id="hora-inicio" />
+                                </div>
+                                <div class="form-field">
+                                    <label for="hora-fin">Hora de Finalización</label>
+                                    <input type="time" id="hora-fin" />
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <div class="form-field">
+                                    <label for="texto">Invitados</label>
+                                    <input type="text" id="titulo" />
+                                </div>
+                                <div class="form-field">
+                                    <label for="estado">Estado</label>
+                                    <select id="estado">
+                                        <option value="pendiente">Pendiente</option>
+                                        <option value="aprobada">Aprobada</option>
+                                        <option value="archivada">Archivada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="descripcion">Descripción</label>
+                                <textarea id="descripcion" rows="4"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn-outline">Cancelar</button>
+                                <a href="https://meet.google.com/" target="_blank"><button type="button" class="btn-primary">Guardar</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; derechos reservados para LUIS, EIDER, DANA, MAROLYN</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

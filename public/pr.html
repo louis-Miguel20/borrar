@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Compromisos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Compromisossssss</h1>
+
+        <nav>
+            <a href="/index.js"> apquiii no</a>
+        </nav>
+        <form id="compromisoForm">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="integrantes">Integrantes:</label>
+            <input type="text" id="integrantes" name="integrantes" required>
+
+            <label for="texto">Texto del Compromiso:</label>
+            <textarea id="texto" name="texto" required></textarea>
+
+            <label for="responsables">Responsables:</label>
+            <input type="text" id="responsables" name="responsables" required>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="Activo">Activo</option>
+                <option value="Completado">Completado</option>
+                <option value="Incompleto">Incompleto</option>
+            </select>
+
+            <button type="button" onclick="submitForm()">Crear Compromiso</button>
+        </form>
+
+        <div id="compromisosList">
+            <!-- Lista de compromisos se agregará aquí -->
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalDetails">
+                <!-- Detalles del compromiso se mostrarán aquí -->
+            </div>
+            <button id="downloadPdf">Descargar PDF</button>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('compromisoForm');
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            fetch('/generate_pdf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(new Blob([blob]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', `${data.titulo}.pdf`);
+                document.body.appendChild(link);
+                link.click();
+                link.parentNode.removeChild(link);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

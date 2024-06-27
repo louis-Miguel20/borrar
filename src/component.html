@@ -1,0 +1,195 @@
+<DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <!--
+// v0 by Vercel.
+// https://v0.dev/t/v8U9KeEtGnN
+-->
+
+<div class="grid grid-cols-[280px_1fr] min-h-screen w-full">
+    <div class="bg-[#87CEEB] text-white flex flex-col gap-2">
+      <div class="sticky top-0 p-2">
+        <a class="flex items-center gap-2" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          >
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+          </svg>
+          <span class="font-bold text-lg">Actas</span>
+        </a>
+      </div>
+      <div class="overflow-auto flex-1">
+        <nav class="grid gap-2 p-4">
+          <a class="hover:bg-[#6aa8d1] px-4 py-2 rounded transition-colors" href="#">
+            Ver Actas
+          </a>
+          <a class="hover:bg-[#6aa8d1] px-4 py-2 rounded transition-colors" href="#">
+            Crear Acta
+          </a>
+          <a class="hover:bg-[#6aa8d1] px-4 py-2 rounded transition-colors" href="#">
+            Editar Acta
+          </a>
+          <a href="#" class="hover:bg-[#6aa8d1] px-4 py-2 rounded transition-colors">
+            Archivar Acta
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <header class="bg-[#87CEEB] text-white py-4 px-6 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <a class="flex items-center gap-2" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-6 w-6"
+            >
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+              <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+            </svg>
+            <span class="font-bold text-lg">Actas</span>
+          </a>
+        </div>
+        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          >
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </header>
+      <main class="flex-1 py-8 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-6">
+            <h1 class="text-3xl font-bold">Crear Acta</h1>
+            <p class="text-[#87CEEB]">Llena los siguientes campos para crear una nueva acta.</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden p-6">
+            <form class="grid gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="fecha"
+                  >
+                    Fecha
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="fecha"
+                    type="date"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="hora-inicio"
+                  >
+                    Hora de Inicio
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="hora-inicio"
+                    type="time"
+                  />
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="hora-fin"
+                  >
+                    Hora de Finalización
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="hora-fin"
+                    type="time"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="estado"
+                  >
+                    Estado
+                  </label>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="aprobada">Aprobada</option>
+                  <option value="archivada">Archivada</option>
+                  <select
+                    aria-hidden="true"
+                    tabindex="-1"
+                    style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;"
+                  >
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  for="descripcion"
+                >
+                  Descripción
+                </label>
+                <textarea
+                  class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  id="descripcion"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="flex justify-end gap-2">
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                  Cancelar
+                </button>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+        <script src="" async defer></script>
+    </body>
+</html>

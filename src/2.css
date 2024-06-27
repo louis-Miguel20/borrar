@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #22b5cf;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #eee;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #eee;
+}
+
+.btn-ver {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-editar {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-archivar {
+    background-color:aqua;
+ }

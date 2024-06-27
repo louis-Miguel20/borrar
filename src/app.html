@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actas</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="sidebar-link">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+                    <span>Actas</span>
+                </a>
+            </div>
+            <div class="sidebar-content">
+                <nav class="nav">
+                    <a href="#" class="nav-link">Ver Actas</a>
+                    <a href="#" class="nav-link">Crear Acta</a>
+                    <a href="#" class="nav-link">Editar Acta</a>
+                    <a href="#" class="nav-link">Archivar Acta</a>
+                </nav>
+            </div>
+        </div>
+        <div class="main">
+            <header class="header">
+                <div class="header-left">
+                    <a href="#" class="header-link">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+                        <span>Actas</span>
+                    </a>
+                </div>
+                <button class="header-button">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </header>
+            <nav>
+                <a href="./2.html">aquiiiiiii</a>
+            </nav>
+            <main class="main-content">
+                <div class="section-box">
+                <section class="section">
+                    <h1>Ver Actas</h1>
+                    <p>Aquí puedes ver todas las actas registradas.</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Reunión de Equipo</td>
+                                    <td>2023-06-01</td>
+                                    <td>Aprobada</td>
+                                    <td class="actions">
+                                        <button>Ver</button>
+                                        <button>Editar</button>
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Reunión de Ventas</td>
+                                    <td>2023-05-15</td>
+                                    <td>Pendiente</td>
+                                    <td class="actions">
+                                        <button>Ver</button>
+                                        <button>Editar</button>
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Reunión de Estrategia</td>
+                                    <td>2023-04-20</td>
+                                    <td>Archivada</td>
+                                    <td class="actions">
+                                        <button>Ver</button>
+                                        <button>Editar</button>
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div></div>
+                </section>
+                <div class="section-box">
+                <section class="section">
+                    <h1>Editar Acta</h1>
+                    <p>Modifica los campos de la acta seleccionada.</p>
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="titulo">Título de la Reunión</label>
+                            <input type="text" id="titulo">
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha">
+                        </div>
+                        <div class="form-group">
+                            <label for="hora-inicio">Hora de Inicio</label>
+                            <input type="time" id="hora-inicio">
+                        </div>
+                        <div class="form-group">
+                            <label for="hora-fin">Hora de Finalización</label>
+                            <input type="time" id="hora-fin">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select id="estado">
+                                <option value="pendiente">Pendiente</option>
+                                <option value="aprobada">Aprobada</option>
+                                <option value="archivada">Archivada</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea id="descripcion" rows="4"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-outline">Cancelar</button>
+                            <button type="submit" class="btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </section></div>
+                <section class="section">
+                    <h1>Archivar Acta</h1>
+                    <p>Selecciona la acta que deseas archivar.</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Reunión de Equipo</td>
+                                    <td>2023-06-01</td>
+                                    <td>Aprobada</td>
+                                    <td class="actions">
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Reunión de Ventas</td>
+                                    <td>2023-05-15</td>
+                                    <td>Pendiente</td>
+                                    <td class="actions">
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Reunión de Estrategia</td>
+                                    <td>2023-04-20</td>
+                                    <td>Archivada</td>
+                                    <td class="actions">
+                                        <button>Archivar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+            <script>
+                const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    mobileMenuToggle.classList.toggle('open');
+                });
+
+
+            </script>
+            <footer class="footer">
+                <p>&copy; 2023 Actas. Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
